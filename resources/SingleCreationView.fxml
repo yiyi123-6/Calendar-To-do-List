@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.creation.SingleCreationViewController">
+   <children>
+      <Text fx:id="creationTitle" layoutX="29.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <Text layoutX="15.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creation type:" />
+      <Text layoutX="15.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author:" />
+      <Text fx:id="creationType" layoutX="113.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ctype" />
+      <Text fx:id="creationAuthor" layoutX="65.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="auth" />
+      <ScrollPane layoutX="188.0" layoutY="114.0" prefHeight="280.0" prefWidth="403.0">
+         <content>
+            <VBox fx:id="eventContainer" prefHeight="284.0" prefWidth="402.0" spacing="10" />
+         </content>
+      </ScrollPane>
+      <VBox alignment="CENTER" layoutX="15.0" layoutY="114.0" prefHeight="272.0" prefWidth="164.0" spacing="15">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onRenameClick" text="Rename" />
+            <Button mnemonicParsing="false" onAction="#onPrivacyClick" text="Change Privacy" />
+            <Button mnemonicParsing="false" onAction="#onAddClick" text="Add Event" />
+            <Button mnemonicParsing="false" onAction="#onConfirmClick" text="Confirm Changes" />
+            <Button mnemonicParsing="false" onAction="#onBack" text="Back" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

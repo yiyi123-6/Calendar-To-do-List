@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.template.EditTemplateViewController">
+   <children>
+      <Text fx:id="templateTitle" layoutX="25.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <ScrollPane layoutX="25.0" layoutY="64.0" prefHeight="316.0" prefWidth="411.0">
+         <content>
+            <VBox fx:id="promptContainer" prefHeight="321.0" prefWidth="403.0" />
+         </content>
+      </ScrollPane>
+      <VBox alignment="CENTER" layoutX="449.0" layoutY="64.0" prefHeight="316.0" prefWidth="140.0" spacing="30">
+         <children>
+            <Button mnemonicParsing="false" text="Confirm" onAction="#onConfirm"/>
+            <Button mnemonicParsing="false" text="Back" onAction="#onBack"/>
+         </children></VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.creation.NewCreationViewController">
+   <children>
+      <ScrollPane layoutX="6.0" layoutY="67.0" prefHeight="515.0" prefWidth="583.0">
+         <content>
+            <VBox fx:id="eventContainer" prefHeight="502.0" prefWidth="884.0" spacing="20" />
+         </content>
+      </ScrollPane>
+      <Text fx:id="creationTypeTitle" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sample Text">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <VBox alignment="CENTER" layoutX="608.0" layoutY="69.0" prefHeight="487.0" prefWidth="166.0" spacing="40">
+         <children>
+            <Text fx:id="creationNameTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Creation Name" />
+            <TextField fx:id="creationNameField"/>
+            <Button fx:id="addEventButton" mnemonicParsing="false" onAction="#onEventAdd" text="Add Event" />
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onEventConfirm" text="Confirm" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClicked" text="Back" />
+         </children></VBox>
+   </children>
+</AnchorPane>

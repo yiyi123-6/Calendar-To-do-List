@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.mail.SendMessageViewController">
+   <children>
+      <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send Message">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <TextField fx:id="toField" layoutX="56.0" layoutY="63.0" prefHeight="26.0" prefWidth="111.0" />
+      <Label layoutX="24.0" layoutY="67.0" text="To:" />
+      <ChoiceBox fx:id="creationSelector" layoutX="446.0" layoutY="63.0" prefHeight="26.0" prefWidth="41.0" />
+      <TextArea fx:id="contentArea" layoutX="24.0" layoutY="100.0" prefHeight="288.0" prefWidth="400.0" />
+      <TextField fx:id="subjectField" layoutX="245.0" layoutY="63.0" prefHeight="26.0" prefWidth="166.0" />
+      <Label layoutX="186.0" layoutY="67.0" text="Subject:" />
+      <ScrollPane layoutX="429.0" layoutY="119.0" prefHeight="269.0" prefWidth="166.0">
+         <content>
+            <VBox fx:id="attachmentContainer" prefHeight="246.0" prefWidth="163.0" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="445.0" layoutY="19.0" mnemonicParsing="false" onAction="#onSend" text="Send" />
+      <Button layoutX="529.0" layoutY="19.0" mnemonicParsing="false" onAction="#onBack" text="Back" />
+      <Button layoutX="504.0" layoutY="63.0" mnemonicParsing="false" onAction="#onAttach" text="Attach" />
+      <Label layoutX="432.0" layoutY="100.0" text="Attachments:" />
+   </children>
+</AnchorPane>

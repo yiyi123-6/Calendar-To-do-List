@@ -1,0 +1,5 @@
+Name of this todo list?
+Names of all events? (separated by commas)
+Description of all events? (separated by commas)
+Privacy of all events? (true = private, false = public) (separated by commas)
+How urgent is each event? (1-10) (separated by commas)

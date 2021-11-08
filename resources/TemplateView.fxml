@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.template.TemplateViewController">
+   <children>
+       <TableView fx:id="templateTableView" layoutX="5.0" layoutY="56.0" prefHeight="338.0" prefWidth="473.0">
+           <columns>
+               <TableColumn fx:id="templateNameCol" prefWidth="135.59997862577438" text="Template name" />
+               <TableColumn fx:id="templatePathCol" minWidth="0.0" prefWidth="341.59999694824216" text="Path" />
+           </columns>
+       </TableView>
+      <Text layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Templates">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <VBox alignment="CENTER" layoutX="486.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0" spacing="30">
+         <children>
+            <Button fx:id="editButton" mnemonicParsing="false" text="Edit Contents" onAction="#onEditPress"/>
+             <Button fx:id="renameButton" mnemonicParsing="false" text="Rename" onAction="#onRenamePress"/>
+            <Button mnemonicParsing="false" text="Back" onAction="#onBackPress"/>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

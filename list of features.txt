@@ -1,0 +1,15 @@
+list of features in phase2:
+Mandatory features:
+- Add an extra template (tagged template)
+- Add the ability for one other kind of user (Anonymous users) to log in.
+- make changes to template in phase1 for user interactions
+- Let admin users be able to interact with every user's creations
+- Let admin users be able to change any user’s creations from private to public or public to private
+- Let admin users be able to suspend users
+
+Optional features:
+- Replace Text UI with GUI using Javafx
+- implement an elaborate password system:
+able to do strength check, allow users to change password, enable to temporary password
+- Implement an internal messaging system that allows users to message each other and also able to delete messages
+- Allow users to delete their own creations and change the status of their creation

@@ -1,0 +1,60 @@
+Simple Factory
+- Classes involved: EventFactory, UserFactory, TemplateFactory
+- Problem identified from phase 1: controller classes are bloated, since it handled input, called relevant methods,
+and also constructed entity instances.
+- Solution: used a Factory Design pattern to generate Events.
+- Benefit: Uphold SRP & OCP
+    - SRP: This change makes EventController become bloated, and supports SRP more.
+    - OCP: The factory class encapsulates event creation, so that when we extend the program to add on more types of
+    events, it is easy to extend on creating instance of the event (e.g., add an if branch to a factory method) and
+    close to modification, it will be the only major change on how to create an instance of a new type of event.
+    Also, when creating an instance of some Event, we only need to modify the code in factory class.
+- Same apply to user & template system
+
+
+Dependency Injection
+- Classes involved:
+    1)  UserManager & all User entity
+    2)  ControllerBuilder & all GUI controller classes
+- Problem: In phase 1, addUser method in UserManager class is also responsible for creating instance of different types
+of user, using "new" keyword, which creates hard dependency
+Solution: With UserFactory implemented, we now create entities outside controllers & manager class, and inject created
+user objects to method addUser in UserManager.
+- Benefit:
+    - Eliminated hard dependency, which supports OCP (eaiser to extend & modify without breaking the code).
+    - It also makes testing UserManager eaiser, because of removing the hard dependency.
+- It's similar to the reason why we injected a UI controller into the ConfigureUIController method in the
+ControllerBuilder class.
+
+
+
+Facade
+- Did not use this in phase 2 final product. We used this pattern in an early version of the application so that we
+can keep the responsibility of the class CompositeController from phase 1 without violating SRP.
+- GUI controllers mirrored program’s subsystems & Controllers became more “self-contained” (no reliance on other
+controllers to be able to function)
+- Did not need a facade if GUI could depend on controllers
+
+
+MVP
+- Accomplished UI interaction with controllers via MVP pattern (see above)
+    model = controller
+    View = FXML files
+    Presenter = presenter
+- We prefer MVP over MVC, since MVC makes controllers must deal with presentation logic, violating SRP
+- In MVP controllers are more decoupled from presentation responsibilities
+- And it was easier to extend with the controllers that we already have.
+
+
+Observer
+- Did not use this, since there are few "observations" needed in our design, therefore observer updating.
+- Phase 1 feedback suggested to use this pattern with saving data, but we found that saving only occurred in 2 actions
+in the program (signing up + logging out), which makes implementing this pattern bloat the program over solve the problem.
+
+
+Builder
+- Classes involved: ControllerBuilder, and all the UI controller classes
+- Problem: Every UI controller has a relatively complex process of initialization/configuration.
+- Solution: So, we encapsulate them in the ControllerBuilder. The method ConfigureUIController in ControllerBuilder
+is in charge of that, configuring/building input UI controllers.
+- Benefit: Building process are hidden, and extract into one class, supporting SRP and OCP.

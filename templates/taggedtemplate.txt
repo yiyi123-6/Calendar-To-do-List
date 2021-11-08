@@ -1,0 +1,5 @@
+Name of this tagged event?
+Names of all events? (separated by commas)
+Description of all events? (separated by commas)
+Privacy of all events? (true = private, false = public) (separated by commas)
+Tags for each event (separated by commas)

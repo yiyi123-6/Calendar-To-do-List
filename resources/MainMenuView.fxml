@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainMenuViewController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="actionContainer" alignment="CENTER" prefHeight="314.0" prefWidth="784.0" spacing="15">
+               <children>
+                  <Button fx:id="ownCreationButton" mnemonicParsing="false" onAction="#onClickCreation" text="Creations">
+                  </Button>
+                  <Button fx:id="profileButton" mnemonicParsing="false" onAction="#onClickProfile" text="Profile">
+                  </Button>
+                  <Button mnemonicParsing="false" text="Mail" onAction="#onMailClick"/>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#onClickExit" text="Exit">
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <top>
+      <Label text="Main Menu" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+</BorderPane>

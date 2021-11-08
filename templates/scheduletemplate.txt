@@ -1,0 +1,5 @@
+Name of this scheduled event list?
+names of all events? (separated by commas)
+Description of all events? (separated by commas)
+Privacy of all events? (true = private, false = public) (separated by commas)
+What is the date of each event? (MM-DD-YYYY hours:minutes) (separated by commas)
